@@ -1,0 +1,21 @@
+h1 {
+    color : purple;
+}
+
+.input {
+    height: 70vh;
+    text-align: center;
+    font-size : 25px;
+    width: 100%
+}
+
+.left{
+    float: left;
+    width: 48% ;
+}
+
+.right {
+    float: right;
+    width: 48% ;
+}
+
