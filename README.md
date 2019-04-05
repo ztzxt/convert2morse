@@ -8,7 +8,7 @@ I will be going through step by step to explain all in the below:
 4. Using web application
 
 ## REQUIREMENTS ##
-1. Node.js, to install node.js go to [this](https://nodejs.org/en/download/) and install it to your platform.
+1. Node.js, to install node.js go to [this](https://nodejs.org/en/download/){:target="_blank" rel="noopener"} and install it to your platform.
 2. Any web browser would do the job for this app.
 
 ## DOWNLOADING AND SETTING UP ##
