@@ -72,9 +72,9 @@ function morseConverter(morse){
 app.use('/style-vue', express.static(__dirname + '/style-vue'));
 app.use('/', (req, res) => res.sendFile(__dirname + '/index.html'));
 io.on('connection', function(socket){
-    console.log('a user connected');
+    console.log('New User Connected at: ' + new Date());
     socket.on('disconnect', function(){
-        console.log('user disconnected');
+        console.log('User Disconnected at: ' + new Date());
     });
     socket.on('morse', function(morse) {
         socket.emit('latin', morseConverter(morse));
