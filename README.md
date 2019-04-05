@@ -13,10 +13,10 @@ I will be going through step by step to explain all in the below:
 
 ## DOWNLOADING AND SETTING UP ##
 1. Click 'Clone or downnload' button above then click 'Download ZIP'
-2. Once it finished, extrct zip file to any location you want. If you don't know what that means, open the file you downloaded and copy the folder inside to a desired locaation.
+2. Once it finished, extrct zip file to any location you want. If you don't know what that means, open the file you downloaded and copy the folder inside to a desired location.
 
 ## RUNNING THE SERVER ##
-1. Run terminal and navigate to the folder you  extracted from zip file. Then navigate to 'public' from there.
+1. Run command line and navigate to the folder you extracted from zip file. Then navigate to 'public' from there.
 2. Run 'node server.js' command.
 Congratulations. Your server is up and running. 
 
