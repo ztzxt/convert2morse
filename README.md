@@ -24,4 +24,4 @@ Congratulations. Your server is up and running.
 1. Open your web browser and go to 'http://localhost:8080'
 2. When you type the text to 'Latin:' area, you will see that 'Morse:' area will show it converted to morse code.
 3. When you type to 'Morse:' area, you will see that 'Latin:' area will show it converted to normal text. 
-Note: Please use only numbers and English letters for text and only '.' and '-' for morse.
+- Note: Please use only numbers and English letters for text and only '.' and '-' for morse.
