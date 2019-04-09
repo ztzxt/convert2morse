@@ -2,8 +2,7 @@ const express = require('express');
 const app = express();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
-
-
+  
 const latinToMorse = {
     'A': '.-',
     'B': '-...',
@@ -72,9 +71,11 @@ function morseConverter(morse){
 app.use('/style-vue', express.static(__dirname + '/style-vue'));
 app.use('/', (req, res) => res.sendFile(__dirname + '/index.html'));
 io.on('connection', function(socket){
-    console.log('New User Connected at: ' + new Date());
+    let  IP = socket.request.connection.remoteAddress
+    if (IP == '::1' || IP == '::ffff:127.0.0.1') IP = 'localhost';
+    console.log(IP + ' connected');
     socket.on('disconnect', function(){
-        console.log('User Disconnected at: ' + new Date());
+        console.log(IP + ' disconnected');
     });
     socket.on('morse', function(morse) {
         socket.emit('latin', morseConverter(morse));
