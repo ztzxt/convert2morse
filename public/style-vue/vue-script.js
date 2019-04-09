@@ -21,7 +21,7 @@ const socket = io.connect('http://localhost:8080');
         props: ['from', 'textareaid', 'side']
     });
 
-    var vue_el = new Vue({
+    const vue_el = new Vue({
         el: '#app',
         data:{
            explained: "<h1>Welcome to the morse code converter.</h1>" +

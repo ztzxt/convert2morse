@@ -72,7 +72,6 @@ app.use('/style-vue', express.static(__dirname + '/style-vue'));
 app.use('/', (req, res) => res.sendFile(__dirname + '/index.html'));
 io.on('connection', function(socket){
     let  IP = socket.request.connection.remoteAddress
-    if (IP == '::1' || IP == '::ffff:127.0.0.1') IP = 'localhost';
     console.log(IP + ' connected');
     socket.on('disconnect', function(){
         console.log(IP + ' disconnected');
@@ -87,4 +86,4 @@ io.on('connection', function(socket){
     });
 });
 
-http.listen(8080);
+http.listen(8080, '0.0.0.0');
