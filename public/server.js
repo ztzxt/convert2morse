@@ -2,7 +2,9 @@ const express = require('express');
 const app = express();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
-  
+const fs = require('fs');
+
+
 const latinToMorse = {
     'A': '.-',
     'B': '-...',
@@ -67,11 +69,12 @@ function morseConverter(morse){
     }
     return printLatin;
 }
-
+app.get('/morse2latin.html', (req, res) => res.sendFile(__dirname + '/morse2latin.html'));
+app.get('/tmp.txt', (req, res) => Response.sendFile(__dirname + '/tmp.txt'));
 app.use('/style-vue', express.static(__dirname + '/style-vue'));
 app.use('/', (req, res) => res.sendFile(__dirname + '/index.html'));
 io.on('connection', function(socket){
-    let  IP = socket.request.connection.remoteAddress
+    let IP = socket.request.connection.remoteAddress;  
     console.log(IP + ' connected');
     socket.on('disconnect', function(){
         console.log(IP + ' disconnected');
@@ -82,8 +85,11 @@ io.on('connection', function(socket){
     socket.on('latin', function(latin){
         latin = latin.toUpperCase();
         socket.emit('morse', latinConverter(latin));
-
+    });
+    socket.on('previous', function(previous){
+        console.log(previous);
+        socket.emit('previous', previous);
     });
 });
 
-http.listen(8080, '0.0.0.0');
+http.listen(8080);

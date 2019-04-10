@@ -1,13 +1,17 @@
 const socket = io.connect('http://localhost:8080');
         socket.on('latin', function(latin){
-            document.getElementById("l2m").value = latin;
+            document.getElementById('latin').innerText = latin;
         });
         socket.on('morse', function(morse){
-            document.getElementById("m2l").value = morse;
+            document.getElementById('morse').innerText = morse;
+        });
+        socket.on('previous', function(previous){
+            document.getElementsByClassName('input').innerText = previous;
         });
 
+
     Vue.component('Converterinterface', {
-        template: '<div v-bind:class="side"><h3>{{from}}:</h3><textarea class="input" v-bind:id="textareaid" v-on:input="newEntry(textareaid)"></textarea></div>',
+        template: '<div><h3>{{from}}:</h3><textarea class="input" v-bind:id="textareaid" v-on:input="newEntry(textareaid)" v-on:focus="newEntry(textareaid)" autofocus></textarea><div class="output" v-bind:id="to"></div></div>',
         methods: {
             newEntry: function(converterid)  {
                 if (converterid === 'm2l') {
@@ -18,13 +22,26 @@ const socket = io.connect('http://localhost:8080');
                 }  
             }
         },
-        props: ['from', 'textareaid', 'side']
+        props: ['from', 'textareaid', 'to']
     });
 
+    Vue.component('Swapbutton', {
+        template: "<div><a v-bind:href='route'><button v-on:click='sendPrevious(to)'>Swap</button></a></div>",
+        props: ['route', 'to'],
+        methods: {
+            sendPrevious: function(to) {
+                if (to == 'latin') {
+                    sessionStorage.setItem('previousmorse', document.getElementById('morse').innerHTML);
+                }
+                else if (to == 'morse'){
+                    sessionStorage.setItem('previouslatin', document.getElementById('latin').innerHTML);
+                }
+            }
+        }
+   });
     const vue_el = new Vue({
         el: '#app',
         data:{
-           explained: "<h1>Welcome to the morse code converter.</h1>" +
-                "<h2>Please use '/' for spaces.</h2>",
+           explained: "<h1>Welcome to the morse code converter.</h1><h2>Please use '/' for spaces.</h2>",
         },
     });

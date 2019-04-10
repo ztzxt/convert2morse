@@ -3,19 +3,16 @@ h1 {
 }
 
 .input {
-    height: 70vh;
+    height: 65vh;
     text-align: center;
     font-size : 25px;
-    width: 100%
-}
-
-.left{
+    width: 50%;
     float: left;
-    width: 48% ;
 }
 
-.right {
+.output {
     float: right;
     width: 48% ;
+    font-size: 25px;
 }
 
