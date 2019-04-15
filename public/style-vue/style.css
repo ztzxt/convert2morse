@@ -1,18 +1,84 @@
-h1 {
-    color : purple;
+h1, h2  {
+    color :black;
 }
 
+i {
+    color: red;
+}
 .input {
-    height: 65vh;
+    position: relative; 
+    float: left;
+    height: 55vh;
     text-align: center;
     font-size : 25px;
-    width: 50%;
-    float: left;
+    width: 42vw;
+    border: solid;
+    left: 4.5vw;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
 }
 
 .output {
+    position: relative; 
     float: right;
-    width: 48% ;
+    width: 42vw ;
+    height: 55vh;
     font-size: 25px;
+    text-align: center;
+    border: solid;
+    left: -4.5vw;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
 }
 
+button {
+    position: relative;
+    left: 35vw;
+    width: 30vw;
+    height: 10vh;
+    border: solid;
+    border-radius: 12px;
+    font-size: 20px;
+    text-align: center;
+}
+ 
+a {
+    text-decoration: none;
+    color: black;
+}
+
+textarea:focus {
+    outline:0px !important;
+    -webkit-appearance:none;
+}
+
+.tab {
+    position: relative;
+    float: left;
+    top: 1.5vh;
+    width: 42vw;
+    height: 5vh;
+    text-align: center;
+    background-color: rgb(221,221,221);
+    border: solid;
+    font-size: 20px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+#outputtab {
+    float: right;
+    left: -4.5vw;
+    z-index: 0;
+}
+
+#inputtab {
+    float: left;
+    left: 4.5vw
+}
