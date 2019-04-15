@@ -22,6 +22,7 @@ Congratulations. Your server is up and running.
 
 ## USING THE APP ##
 1. Open your web browser and go to 'http://localhost:8080'
-2. When you type the text to 'Latin:' area, you will see that 'Morse:' area will show it converted to morse code.
-3. When you type to 'Morse:' area, you will see that 'Latin:' area will show it converted to normal text. 
-- Note: Please use only numbers and English letters for text and only '.' and '-' for morse.
+2. Now you are converting latin to morse. Type the area under 'Latin' and you will see that when you type it is automaticcaly converted to morse at 'Morse' area.
+3. If you want to convert text from morse to latin, click the button above input area, you will see that your morse text is moved to input area and now you are converting text from morse to latin. 
+4. Have fun. :)
+- Note: You can access the app from other devices if you change 'localhost' with the local IP of the PC that is running the Node.js server.

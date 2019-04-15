@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Morse Converter</title>
+    <title>Latin to Morse</title>
     <link rel="stylesheet" type="text/css" href="style-vue/style.css"/>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="/socket.io/socket.io.js"></script>
@@ -10,11 +10,12 @@
 
 <body>
     <div id='app'>
-        <div v-html='explained'></div>
-        <converterinterface from='Latin'  textareaid='l2m' side='left'></converterinterface>
-        <converterinterface from='Morse'  textareaid='m2l' side='right'></converterinterface>
+        <div v-html='explainedLatin'></div>
+        <swapbutton route='morse2latin.html' to='latin'></swapbutton>
+        <areatags from='Latin' to='Morse'></areatags>
+        <converterinterface from='Latin'  textareaid='l2m' to='morse'></converterinterface>
     </div>
     <script src="style-vue/vue-script.js"></script>
-  
+    <script>document.getElementById('l2m').value = sessionStorage.getItem('previouslatin');</script>
 </body>
-</html>
+</html> 
