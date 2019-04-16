@@ -1,4 +1,4 @@
-# convert2morse-v2
+# convert2morse
 This project is based on node.js, vue.js and socket.io.
 Purpose of this project is to create a both frontend and backend application to convert latin to morse code and vice versa.
 I will be going through step by step to explain all in the below:
