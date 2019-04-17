@@ -68,7 +68,6 @@ function morseConverter(morse){
     return printLatin;
 }
 app.get('/morse2latin.html', (req, res) => res.sendFile(__dirname + '/morse2latin.html'));
-app.get('/tmp.txt', (req, res) => Response.sendFile(__dirname + '/tmp.txt'));
 app.use('/style-vue', express.static(__dirname + '/style-vue'));
 app.use('/', (req, res) => res.sendFile(__dirname + '/index.html'));
 io.on('connection', function(socket){
