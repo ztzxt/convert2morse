@@ -12,7 +12,7 @@ I will be going through step by step to explain all in the below:
 2. Any web browser would do the job for this app.
 
 ## DOWNLOADING AND SETTING UP ##
-1. Click 'Clone or downnload' button above then click 'Download ZIP'
+1. Click 'Clone or download' button above then click 'Download ZIP'
 2. Once it finished, extrct zip file to any location you want. If you don't know what that means, open the file you downloaded and copy the folder inside to a desired location.
 
 ## RUNNING THE SERVER ##
